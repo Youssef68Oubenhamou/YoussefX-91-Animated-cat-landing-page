@@ -1,0 +1,188 @@
+:root {
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: black;
+}
+
+.cat .head {
+    position: absolute;
+    background-color: black;
+    width: 350px;
+    height: 350px;
+    border-radius: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.cat .head .eyes .first-eye .first-one {
+    position: absolute;
+    background-color: black;
+    width: 110px;
+    height: 0px;
+    transform: translate(0% , -80%);
+    animation: both closing-eyes-first 1s ease-out 3s alternate ;
+    z-index: 1;
+}
+
+.cat .head .eyes .second-eye .second-one {
+    position: absolute;
+    background-color: black;
+    width: 110px;
+    height: 0px;
+    transform: translate(0% , -80%);
+    animation: both closing-eyes-second 1s ease-out 3s alternate;
+    z-index: 1;
+}
+
+@keyframes closing-eyes-first {
+    0% {
+        height: 0px;
+    }
+    25% {
+        height: 110px;
+        border-radius: 50% 50% 50% 50% / 60% 60% 30% 30%;
+        transform: translateY(-6%);
+    }
+    50% {
+        height: 0px;
+        transform: translate(0% , -80%);
+    }
+    75% {
+        height: 110px;
+        border-radius: 50% 50% 50% 50% / 60% 60% 30% 30%;
+        transform: translateY(-6%);
+    }
+    100% {
+        /* height: 110px;
+        border-radius: 50% 50% 50% 50% / 60% 60% 30% 30%;
+        transform: translateY(-6%); */
+        height: 0px;
+        transform: translate(0% , -80%);
+    }
+}
+
+@keyframes closing-eyes-second {
+    0% {
+        height: 0px;
+    }
+    25% {
+        height: 110px;
+        border-radius: 50% 50% 50% 50% / 60% 60% 30% 30%;
+        transform: translateY(-6%);
+    }
+    50% {
+        height: 0px;
+        transform: translate(0% , -80%);
+    }
+    75% {
+        height: 110px;
+        border-radius: 50% 50% 50% 50% / 60% 60% 30% 30%;
+        transform: translateY(-6%);
+    }
+    100% {
+        /* height: 110px;
+        border-radius: 50% 50% 50% 50% / 60% 60% 30% 30%;
+        transform: translateY(-6%); */
+        height: 0px;
+        transform: translate(0% , -80%);
+    }
+}
+
+.cat .head .eyes {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    transform: translateY(80%);
+}
+
+.cat .head .eyes .first-eye , .cat .head .eyes .second-eye {
+    position: relative;
+    background-color: white;
+    width: 110px;
+    height: 110px;
+    border-radius: 50% 50% 50% 50% / 60% 60% 30% 30%;
+
+}
+
+.cat .head .eyes .first-eye .the-first-black-area , .cat .head .eyes .second-eye .the-second-black-area {
+    position: absolute;
+    background-color: black;
+    width: 20px;
+    height: 40px;
+    border-radius: 50%;
+    transform: translate(220% , 90%);
+    animation: moving-eyes 1s ease-out 2s ;
+}
+
+@keyframes moving-eyes {
+    0% {
+        transform: translate(220% , 90%);
+    }
+    25% {
+        transform: translate(270% , 60%);
+    }
+    50% {
+        transform: translate(110% , 60%);
+    }
+    100% {
+        transform: translate(220% , 90%);
+    }
+}
+
+.cat .head .eyes .first-eye .the-first-black-area:after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    width: 5px;
+    height: 16px;
+    border-radius: 50%;
+    transform: translate(330% , 90%) rotate(90deg);
+}
+
+.cat .head .eyes .second-eye .the-second-black-area:after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    width: 5px;
+    height: 16px;
+    border-radius: 50%;
+    transform: translate(330% , 90%) rotate(90deg);
+}
+
+.cat .head .eyes .first-eye:after {
+    position: absolute;
+    content: '';
+    background-color: white;
+    width: 15px;
+    height: 7px;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    transform: translate(685% , 1130%);
+}
+
+.cat .head .eyes .second-eye:after {
+    position: absolute;
+    content: '';
+    background-color: white;
+    width: 15px;
+    height: 7px;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    transform: translate(-48% , 1130%);
+}
+
+.cat .head .nose {
+    background-color: white;
+    width: 40px;
+    height: 20px;
+    border-radius: 50% 50% 50% 50% / 25% 25% 70% 70%;
+    transform: translate(388% , 395%);
+}
