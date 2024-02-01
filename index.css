@@ -23,6 +23,12 @@ body {
     transform: translate(-50% , -50%);
 }
 
+.cat .head .ears {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .cat .head .eyes .first-eye .first-one {
     position: absolute;
     background-color: black;
